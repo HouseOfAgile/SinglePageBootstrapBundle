@@ -1,0 +1,30 @@
+{% extends (global_theme is defined)?'HOASinglePageBundle:Theme/'~(config.settings.global_theme|capitalize)~':baseTheme.html.twig':'HOASinglePageBundle:Theme:defaultTheme.html.twig' %}
+
+{% block container %}
+    {% block navbar_extra %}
+    {% endblock navbar_extra %}
+
+
+    {% block header %}
+        {% if config.settings.header|default is not empty %}
+            {% include 'HOASinglePageBundle:Theme/'~ config.header.type|split('_')[0]|capitalize ~':header.html.twig' with {'data':config.header.data} %}
+        {% endif %}
+    {% endblock header %}
+
+    {% block content_navbar %}
+    {% endblock content_navbar %}
+
+    {% block content_main %}
+        {% for active_section in config.settings.active_sections %}
+            {% set sectionPath=attribute(config.sections, active_section) %}
+            {% include 'HOASinglePageBundle:Theme/'~ sectionPath.type|split('_')[0]|capitalize ~':' ~ sectionPath.type|split('_')[1] ~'.html.twig' with {'sectionName':active_section,'data': sectionPath.data,'componentName':sectionPath.type|split('_')[1]}  %}
+        {% endfor %}
+    {% endblock content_main %}
+
+
+    {% block footer %}
+        {% if config.settings.footer|default is not empty %}
+            {% include 'HOASinglePageBundle:Theme/'~ config.footer.type|split('_')[0]|capitalize ~':'~config.footer.type|split('_')[1] ~'.html.twig' with {'data':config.footer.data} %}
+        {% endif %}
+    {% endblock footer %}
+{% endblock container %}

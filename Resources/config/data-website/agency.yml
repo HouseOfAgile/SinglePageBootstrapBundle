@@ -1,0 +1,116 @@
+settings:
+    global_theme: agency
+    title: "Agency"
+    active_sections:
+        - about
+        - services
+        - team
+        - contact
+#    should be used to define what kind of website
+    type: singlepage
+    mail: "test@test.com"
+    header: true
+    footer: true
+
+header:
+    type: agency_header
+    data:
+        punch_phrase_1: "text"
+        punch_phrase_2: "text"
+        tell_me_more: "text"
+sections:
+    about:
+        type: agency_about
+        data:
+            heading: "text"
+            subheading: "text"
+            timeline:
+                launch:
+                    date: "text"
+                    name: "text"
+                    presentation: "text"
+                    image: "image"
+                agency_born:
+                    date: "text"
+                    name: "text"
+                    presentation: "text"
+                    image: "image"
+                full_service:
+                    date: "text"
+                    name: "text"
+                    presentation: "text"
+                    image: "image"
+            phase_2:
+                    date: "text"
+                    name: "text"
+                    presentation: "text"
+                    image: "image"
+            end_about:
+                name: "text"
+
+    services:
+        type: agency_services
+        data:
+            heading: "text"
+            subheading: "text"
+            service_list:
+                ecommerce:
+                    name: "text"
+                    presentation: "text"
+                    icon: "lightbulb-o"
+                responsive:
+                    name: "text"
+                    presentation: "text"
+                    icon: "laptop"
+                web_security:
+                    name: "text"
+                    presentation: "text"
+                    icon: "lock"
+    team:
+        type: agency_team
+        data:
+            heading:
+            subheading:
+            members:
+                larry:
+                    name: "Larry Parker"
+                    presentation: "text"
+                    syndication:
+                        facebook:
+                        twitter:
+                        linkedin:
+                diana:
+                    name: "Diana Petersen"
+                    presentation: "text"
+                    syndication:
+                        facebook:
+                        twitter:
+                        linkedin:
+                kay:
+                    name: "Kay West"
+                    presentation: "text"
+                    syndication:
+                        facebook:
+                        twitter:
+                        linkedin: "http://de.linkedin.com/"
+            team_footer: "text"
+    contact:
+        type: agency_contact
+        data:
+            heading:
+            subheading:
+footer:
+    type: agency_footer
+    data:
+        copyright: "text"
+        syndication:
+            facebook: "https://www.facebook.com/"
+            twitter:
+            linkedin: "https://www.linkedin.com/"
+        links:
+            privacy:
+                name: "text"
+                url: "https://www.linkedin.com/"
+            terms:
+                name: "text"
+                url: "https://www.linkedin.com/"

@@ -1,0 +1,36 @@
+{% trans_default_domain global_theme %}
+<!-- Services Section -->
+{% import 'HOASinglePageBundle:Macros:bootstrapMacros.html.twig' as bootstrapMacros %}
+
+<section id="services" class="services bg-primary">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>Our Services</h2>
+                <hr class="small">
+                <div class="row">
+                    {% for service_name, service_data in data.service_list %}
+                        <div class="{{ bootstrapMacros.getLayoutClass(loop.length) }}">
+                            <div class="service-item">
+                                <span class="fa-stack fa-4x">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-{{ service_data.icon|default('laptop') }} fa-stack-1x text-primary"></i>
+                            </span>
+                                <h4>
+                                    <strong>{{ (sectionName~'.service_list.'~service_name~'.name')|trans }}</strong>
+                                </h4>
+
+                                <p>{{ (sectionName~'services.service_list.'~service_name~'.presentation')|trans }}</p>
+                                {#<a href="#" class="btn btn-light">Learn More</a>#}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <!-- /.row (nested) -->
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>

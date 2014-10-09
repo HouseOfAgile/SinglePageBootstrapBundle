@@ -1,0 +1,25 @@
+{% trans_default_domain global_theme %}
+<!-- Services Section -->
+
+<section id="services">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">{{ (sectionName~'.heading')|trans }}</h2>
+                <h3 class="section-subheading text-muted">{{ (sectionName~'.subheading')|trans }}</h3>
+            </div>
+        </div>
+        <div class="row text-center">
+            {% for service_name, service_data in data.service_list %}
+            <div class="col-md-4">
+                    <span class="fa-stack fa-4x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-{{ service_data.icon|default('laptop') }} fa-stack-1x fa-inverse"></i>
+                    </span>
+                <h4 class="service-heading">{{ (sectionName~'.service_list.'~service_name~'.name')|trans }}</h4>
+                <p class="text-muted">{{ (sectionName~'services.service_list.'~service_name~'.presentation')|trans }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

@@ -1,0 +1,111 @@
+{% extends 'DacorpExtraBundle::base.html.twig' %}
+{% from 'DacorpExtraBundle:Macros:improvedFlash.html.twig' import session_flash %}
+{% block body_start %}
+{% endblock body_start %}
+
+{% block body_tag %}
+<body id="page-top" class="index" data-spy="scroll">
+{% endblock body_tag %}
+
+{% block navbar %}
+    {% include 'HOASinglePageBundle:Navbar:navbar.html.twig' %}
+{% endblock %}
+
+{#Disable responsive#}
+{% block responsive %}{% endblock responsive %}
+
+
+{% block navbar_extra %}
+{% endblock navbar_extra %}
+
+{% block head_title %}
+    <title>{% spaceless %}{% block title %} {{ (title|default() is not null)?'':title~' - ' }}{% endblock %}{{ config.settings.title|default(application_name) }}{% endspaceless %}</title>
+{% endblock head_title %}
+
+{% block stylesheets_main %}
+
+    {% stylesheets filter='?yui_css,cssrewrite' output='css/compiled/desktop-full.css'
+    '//cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/css/base/jquery-ui.css'
+    '@HOASinglePageBundle/Resources/public/less/bootstrap.less' %}
+
+    <link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="screen"/>
+    {% endstylesheets %}
+
+{% endblock stylesheets_main %}
+
+{% block stylesheets %}
+    {# We use the default style provided by dacorp #}
+    {{ parent() }}
+
+    {#Temporary include glyphicon, should be provided by mopa integration tho #}
+
+    {#<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">#}
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"/>
+
+    {% stylesheets filter='?yui_css,cssrewrite,less' output='compiled/global.css'
+    '@HOASinglePageBundle/Resources/public/less/global.less' %}
+    <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen"/>
+    {% endstylesheets %}
+
+    <link href='http://fonts.googleapis.com/css?family=Carme|Open+Sans+Condensed:300|Open+Sans' rel='stylesheet'
+          type='text/css'>
+{% endblock stylesheets %}
+
+{% block head_script %}
+    {# add jquery if necessary #}
+    {#<script src="//cdnjs.cloudflare.com/ajax/libs/less.js/1.5.0/less.min.js" type="text/javascript"></script>#}
+
+{% endblock head_script %}
+
+{% block content_upload_form %}
+{% endblock content_upload_form %}
+
+{% block content_top %}
+    <div class="page-header">
+        {% block content_top_data %}
+            <h1>{% block headline %}{{ application_name }} {% endblock headline %}</h1>
+        {% endblock content_top_data %}
+    </div>
+{% endblock content_top %}
+
+{% block content_row %}
+    <div class="row">
+        <div class="col-md-12 center">
+            <div class="da-content">
+                {% block flashes %}
+                    {% if app.session.flashbag.peekAll|length > 0 %}
+                        <div class="row top-buffer">
+                            <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
+                                {{ session_flash(true) }}
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endblock flashes %}
+                {% block content_main %}
+                {% endblock content_main %}
+            </div>
+        </div>
+    </div>
+{% endblock content_row %}
+
+
+{% block foot_script %}
+
+    {#'http://ubervu.github.io/grid/src/gridList.js'#}
+    {#'http://ubervu.github.io/grid/src/jquery.gridList.js'#}
+    {% javascripts filter='?yui_js' output='compiled/all-libraries.js'
+    '//cdnjs.cloudflare.com/ajax/libs/holder/2.3.1/holder.js'
+    '//cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/1.4.12/jquery.smooth-scroll.min.js'
+    '//cdnjs.cloudflare.com/ajax/libs/retina.js/1.0.1/retina.js'
+    '//cdnjs.cloudflare.com/ajax/libs/bootstrap-switch/3.0.2/js/bootstrap-switch.min.js'
+    '//cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.5.4/bootstrap-select.min.js'
+    '//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'
+    %}
+
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    {% include "HOASinglePageBundle:JsCommon:common-js.html.twig" %}
+
+
+{% endblock foot_script %}
+

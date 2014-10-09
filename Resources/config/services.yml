@@ -1,0 +1,5 @@
+imports:
+    - { resource: "listener.yml" }
+    - { resource: "manager.yml" }
+    - { resource: "menu.yml" }
+    - { resource: "form.yml" }

@@ -1,0 +1,38 @@
+{% trans_default_domain global_theme %}
+<!-- Footer -->
+<footer class="text-center">
+    <div class="footer-above">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col col-md-4">
+                    <h3>{{ ('footer.left.heading')|trans }}</h3>
+                    <p>{{ ('footer.left.content')|trans }}</p>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h3>{{ ('footer.syndication.heading')|trans }}</h3>
+                    <ul class="list-inline">
+                        {% for social_name, social_url in data.syndication %}
+                            {%  if social_url is not null %}
+                                <li><a href="{{ social_url }}" class="btn-social btn-outline"><i class="fa fa-{{ social_name }}"></i></a>
+                                </li>
+                            {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+                <div class="footer-col col-md-4">
+                    <h3>{{ ('footer.right.heading')|trans }}</h3>
+                    <p>{{ ('footer.right.content')|trans }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-below">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    {{ ('footer.copyright')|trans }}
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

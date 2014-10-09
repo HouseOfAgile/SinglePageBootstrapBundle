@@ -1,0 +1,42 @@
+{% trans_default_domain global_theme %}
+<!-- Team Section -->
+
+
+
+<section id="team" class="bg-light-gray">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">{{ (sectionName~'.heading')|trans }}</h2>
+                <h3 class="section-subheading text-muted">{{ (sectionName~'.subheading')|trans }}</h3>
+            </div>
+        </div>
+        <div class="row">
+            {% for team_name, team_data in data.members %}
+            <div class="col-sm-{{ (loop.length%3 ==0)?4:(loop.length%2 ==0)?6:3 }}">
+                <div class="team-member">
+                    {% image '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/agency/img/team/1.jpg' %}
+                    <img class="img-responsive img-circle" src="{{ asset_url }}" alt="">
+                    {% endimage %}
+                    <h4>{{ team_data.name }}</h4>
+                    <p class="text-muted">{{ (sectionName~'.members.'~team_name~'.presentation')|trans }}</p>
+                    <ul class="list-inline social-buttons">
+                        {% for social_name, social_value in team_data.syndication %}
+                        {%  if social_value is not null %}
+                        <li><a href="{{ social_value }}"><i class="fa fa-{{ social_name }}"></i></a>
+                        </li>
+                        {% endif %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <p class="large text-muted">{{ (sectionName~'.team_footer')|trans }}</p>
+            </div>
+        </div>
+    </div>
+</section>

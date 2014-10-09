@@ -1,0 +1,5 @@
+services:
+    hoa.form.type.contact:
+        class: HOA\Bundle\SinglePageBundle\Form\Type\ContactFormType
+        tags:
+            - { name: form.type, alias: hoa_contact_form }

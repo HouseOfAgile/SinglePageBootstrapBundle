@@ -1,0 +1,20 @@
+parameters:
+    hoa.menu_builder.frontend.class: HOA\Bundle\SinglePageBundle\Menu\FrontendMenuBuilder
+
+services:
+
+    hoa.menu_builder:
+        class: %hoa.menu_builder.frontend.class%
+        arguments: [ "@knp_menu.factory","@translator","@dacorp.menu_builder","%locale%","%available_langs%"]
+        calls:
+            - [setRequest, ["@?request="]]
+
+    hoa.menu_builder.lang_menu:
+        class: Knp\Menu\MenuItem
+        factory_method: createLangMenu
+        factory_service: hoa.menu_builder
+        scope: request # needed as we have the request as a dependency here
+
+        tags:
+            - { name: knp_menu.menu, alias: hoa.menu_builder.lang_menu }
+

@@ -1,0 +1,51 @@
+{% trans_default_domain global_theme %}
+
+
+
+<section id="contact">
+    <div class="container">
+
+        {% if contactSent %}
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">{{ (sectionName~'.contact.thanks')|trans }} <i class="fa fa-heart-o"></i></h2>
+                    <h2 class="section-heading">{{ (sectionName~'.contact.we_ll_keep_in_touch')|trans }}</h2>
+                </div>
+            </div>
+        {% else %}
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">{{ (sectionName~'.contact.heading')|trans }}</h2>
+
+                    <h3 class="section-subheading text-muted">{{ (sectionName~'.contact.subheading')|trans }}</h3>
+                </div>
+            </div>
+            <div class="row">
+                {{ form_start(form) }}
+                <div class="col-lg-12">
+                    <div class="col-md-6">
+
+                        {{ form_errors(form) }}
+
+                        {{ form_row(form.email) }}
+                        {{ form_row(form.name) }}
+                        {{ form_row(form.phone) }}
+                        {{ form_row(form.category) }}
+                    </div>
+                    <div class="col-md-6">
+                        {{ form_row(form.message) }}
+                    </div>
+
+                    <div class="clearfix"></div>
+                    <hr/>
+                    <div class="col-lg-12 text-center">
+                        <div id="success"></div>
+                        <button type="submit" class="btn btn-xl">{{ (sectionName~'.contact.send_message')|trans }}</button>
+                    </div>
+                </div>
+                {{ form_end(form) }}
+            </div>
+        {% endif %}
+
+    </div>
+</section>

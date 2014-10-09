@@ -1,0 +1,38 @@
+{
+    "name":         "houseofagile/single-page-boostrap-bundle",
+    "description":  "Single Page based on bootstrap and symfony",
+    "keywords":     ["single page", "multilanguage", "contact"],
+    "homepage":     "https://github.com/HouseOfAgile/single-page-bootstrap-bundle",
+    "type":         "symfony-bundle",
+    "license":      "Apache",
+    "authors": [
+        {
+            "name": "Jean-Christophe Meillaud",
+            "email": "jc@houseofagile.com",
+            "homepage": "http://www.houseofagile.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "symfony/framework-bundle": "~2.3",
+        "symfony/console": "*"
+    },
+    "require-dev": {
+        "houseofagile/notification-bundle": "dev-master",
+        "knplabs/knp-menu": "dev-master as 1.1",
+        "knplabs/knp-menu-bundle": "dev-master as 1.1",
+        "jms/serializer-bundle": "dev-master as 0.12.0",
+        "jms/translation-bundle": "1.1.*",
+        "dacorp/extra-bundle": "dev-master"
+    },
+    "autoload": {
+        "psr-0": { "HOA\\Bundle\\SinglePageBundle" : "" }
+
+    },
+    "target-dir": "HOA/Bundle/SinglePageBundle",
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.8-dev"
+        }
+    }
+}

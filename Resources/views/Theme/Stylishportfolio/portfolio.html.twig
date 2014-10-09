@@ -1,0 +1,31 @@
+{% trans_default_domain global_theme %}
+
+<!-- Portfolio -->
+<section id="portfolio" class="portfolio">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h2>Our Work</h2>
+                <hr class="small">
+                <div class="row">
+                    {% for portfolio in 1..4 %}
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    {% image '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/stylish-portfolio/img/portfolio-1.jpg' %}
+                                    <img class="img-portfolio img-responsive" src="{{ asset_url }}" alt="">
+                                    {% endimage %}
+                                </a>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <!-- /.row (nested) -->
+                <a href="#" class="btn btn-dark">View More Items</a>
+            </div>
+            <!-- /.col-lg-10 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+</section>

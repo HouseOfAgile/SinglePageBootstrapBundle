@@ -1,0 +1,4 @@
+{% macro getLayoutClass(length) %}
+    {{ (length%3 ==0)?'col-md-4 cold-sm-4':(length%4 ==0)?'col-md-3 cold-sm-6':'col-md-6 cold-sm-6' }}
+{% endmacro %}
+

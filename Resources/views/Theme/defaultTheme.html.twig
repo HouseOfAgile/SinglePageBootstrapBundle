@@ -1,0 +1,54 @@
+{% extends 'HOASinglePageBundle::base.html.twig' %}
+{% from 'DacorpExtraBundle:Macros:improvedFlash.html.twig' import session_flash %}
+
+{% block stylesheets %}
+    {# We use the default style provided by dacorp #}
+    {{ parent() }}
+
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"/>
+
+    {% stylesheets filter='?yui_css,cssrewrite,less' output='compiled/frontend.css'
+    '@HOASinglePageBundle/Resources/public/less/frontend.less' %}
+    <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen"/>
+    {% endstylesheets %}
+
+    <link href='http://fonts.googleapis.com/css?family=Carme|Open+Sans+Condensed:300|Open+Sans' rel='stylesheet'
+          type='text/css'>
+{% endblock stylesheets %}
+
+{% block head_script %}
+    {{ parent() }}
+
+    <style type="text/css">
+        {% if page is defined %}
+
+        html {
+            background: url({{ page.backgroundImage }}) no-repeat center center fixed;
+        }
+
+        {% endif %}
+    </style>
+
+{% endblock %}
+
+{% block footer %}
+    <div id="wrapper-footer">
+        <div class="row">
+            <div class="pull-right">
+                footer
+            </div>
+        </div>
+    </div>
+
+{% endblock footer %}
+
+{% block foot_script %}
+    {{ parent() }}
+
+    {% javascripts filter='?yui_js' output='compiled/frontend.js' %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    {% include "HOASinglePageBundle:JsCommon:frontend-js.html.twig" %}
+
+{% endblock foot_script %}
+

@@ -1,0 +1,8 @@
+parameters:
+    hoa.contact_listener.class: HOA\Bundle\SinglePageBundle\EventListener\HOAContactListener
+services:
+    hoa.listener.contact:
+        class: "%hoa.contact_listener.class%"
+        tags:
+          - { name: kernel.event_subscriber }
+        arguments: [ "@hoa.mailer", "@hoa.twilio.api", "@hoa.notification", "@logger"]

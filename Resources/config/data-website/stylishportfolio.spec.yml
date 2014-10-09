@@ -1,0 +1,27 @@
+about:
+    heading:
+    subheading:
+header:
+    punch_phrase_1:
+    punch_phrase_2:
+    tell_me_more:
+services:
+    service_list:
+        service1:
+            name:
+            presentation:
+        service2:
+            name:
+            presentation:
+footer:
+    heading: "text"
+    address: "text"
+    phone: "(123) 456-7890"
+    email: "name@example.com"
+    copyright: "text"
+    syndication:
+        facebook: "https://www.facebook.com/"
+        twitter:
+        linkedin: "https://www.linkedin.com/"
+callout:
+    header: "text"

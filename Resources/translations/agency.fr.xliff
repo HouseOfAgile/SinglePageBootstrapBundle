@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" xmlns:jms="urn:jms:translation" version="1.2">
+  <file date="2014-10-01T20:05:14Z" source-language="en" target-language="fr" datatype="plaintext" original="not.available">
+    <header>
+      <tool tool-id="JMSTranslationBundle" tool-name="JMSTranslationBundle" tool-version="1.1.0-DEV"/>
+      <note>The source node in most cases contains the sample message as written by the developer. If it looks like a dot-delimitted string such as "form.label.firstname", then the developer has not provided a default message.</note>
+    </header>
+    <body>
+      <trans-unit id="3db4ce30d3905bf22576d6242da5a82c39092cbc" resname=".name">
+        <source>.name</source>
+        <target state="new">.name</target>
+        <jms:reference-file line="22">Theme/Agency/footer.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="57a71c5f245631d613903a64630bc888ea7e10f4" resname="about.end_about.name">
+        <source>about.end_about.name</source>
+        <target state="new">about.end_about.name</target>
+        <jms:reference-file line="24">views/Common/dummyTranslation.html.twig</jms:reference-file>
+        <jms:reference-file line="36">Theme/Agency/about.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="417014f25e85b108a2b4a1965fae4c0fd4f97ab2" resname="about.heading">
+        <source>about.heading</source>
+        <target>sqdqsd</target>
+        <jms:reference-file line="10">views/Common/dummyTranslation.html.twig</jms:reference-file>
+        <jms:reference-file line="8">Theme/Agency/about.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="e991867ab42827a0a6561ce5ec9fe01bcf4fe176" resname="about.subheading">
+        <source>about.subheading</source>
+        <target state="new">about.subheading</target>
+        <jms:reference-file line="11">views/Common/dummyTranslation.html.twig</jms:reference-file>
+        <jms:reference-file line="9">Theme/Agency/about.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="98b708c5818631b96eff4c424bd28cd7d7e462ff" resname="about.timeline.agency_born.date">
+        <source>about.timeline.agency_born.date</source>
+        <target state="new">about.timeline.agency_born.date</target>
+        <jms:reference-file line="15">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="cc4cdabd13e1167e9ad47428574a9c3b2d255608" resname="about.timeline.agency_born.name">
+        <source>about.timeline.agency_born.name</source>
+        <target state="new">about.timeline.agency_born.name</target>
+        <jms:reference-file line="16">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="17b4c38f972c0be027c396dc1cd6579dfba45204" resname="about.timeline.agency_born.presentation">
+        <source>about.timeline.agency_born.presentation</source>
+        <target state="new">about.timeline.agency_born.presentation</target>
+        <jms:reference-file line="17">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="eaf86f735137705a7b9e07ff03538a04a462d748" resname="about.timeline.full_service.date">
+        <source>about.timeline.full_service.date</source>
+        <target state="new">about.timeline.full_service.date</target>
+        <jms:reference-file line="18">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9466b74d438e1b1ac3f8b22e1c98e28b9aee2be2" resname="about.timeline.full_service.name">
+        <source>about.timeline.full_service.name</source>
+        <target state="new">about.timeline.full_service.name</target>
+        <jms:reference-file line="19">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="096e7b7f6a55229453b286b705c34ecd0859c563" resname="about.timeline.full_service.presentation">
+        <source>about.timeline.full_service.presentation</source>
+        <target state="new">about.timeline.full_service.presentation</target>
+        <jms:reference-file line="20">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="5605a2c5940287ab7d63d8165e4fadf93ad041b3" resname="about.timeline.launch.date">
+        <source>about.timeline.launch.date</source>
+        <target state="new">about.timeline.launch.date</target>
+        <jms:reference-file line="12">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="103a6d48930cca2576d93ec4959349017132ea21" resname="about.timeline.launch.name">
+        <source>about.timeline.launch.name</source>
+        <target state="new">about.timeline.launch.name</target>
+        <jms:reference-file line="13">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="febb2ca2c2f8450ad891783decc2c95e6e31e6e3" resname="about.timeline.launch.presentation">
+        <source>about.timeline.launch.presentation</source>
+        <target state="new">about.timeline.launch.presentation</target>
+        <jms:reference-file line="14">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fcb2afd7ce3776da962d5eab8f02c896ae4b7d3d" resname="about.timeline.phase_2.date">
+        <source>about.timeline.phase_2.date</source>
+        <target state="new">about.timeline.phase_2.date</target>
+        <jms:reference-file line="21">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="53a0aac30f1d34a9689c653a894c6727ca7c1e58" resname="about.timeline.phase_2.name">
+        <source>about.timeline.phase_2.name</source>
+        <target state="new">about.timeline.phase_2.name</target>
+        <jms:reference-file line="22">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="fc19216f578bf9b6b8e9d2eaea7c6133912d6b90" resname="about.timeline.phase_2.presentation">
+        <source>about.timeline.phase_2.presentation</source>
+        <target state="new">about.timeline.phase_2.presentation</target>
+        <jms:reference-file line="23">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1ed5894b6c155bf8bb1d159e6903855f87af01db" resname="agency_about">
+        <source>agency_about</source>
+        <target state="new">agency_about</target>
+        <jms:reference-file line="2">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="f3fe966f27ca36ef44f01648d29776e6f5a79410" resname="agency_contact">
+        <source>agency_contact</source>
+        <target state="new">agency_contact</target>
+        <jms:reference-file line="5">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="a8428a9aa128f574f8faf46638a7123be59dc69d" resname="agency_portfolio">
+        <source>agency_portfolio</source>
+        <target state="new">agency_portfolio</target>
+        <jms:reference-file line="4">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="8accc6eb7f7a4f5da2db250d8f6b989ac52be1f1" resname="agency_services">
+        <source>agency_services</source>
+        <target state="new">agency_services</target>
+        <jms:reference-file line="3">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="ef55c99e5d637247bb82e337da2102df0ebe0e27" resname="agency_team">
+        <source>agency_team</source>
+        <target state="new">agency_team</target>
+        <jms:reference-file line="6">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b469507c15ca085ba9753f60ab835f68cda9c725" resname="footer.copyright">
+        <source>footer.copyright</source>
+        <target state="new">footer.copyright</target>
+        <jms:reference-file line="37">views/Common/dummyTranslation.html.twig</jms:reference-file>
+        <jms:reference-file line="7">Theme/Agency/footer.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="098136239e1aa9aad286a858c1860c18cf6f5f3d" resname="footer.links.privacy.name">
+        <source>footer.links.privacy.name</source>
+        <target state="new">footer.links.privacy.name</target>
+        <jms:reference-file line="38">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="259638d5688a342301819c8c05484bea2dad2c5a" resname="footer.links.terms.name">
+        <source>footer.links.terms.name</source>
+        <target state="new">footer.links.terms.name</target>
+        <jms:reference-file line="39">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="cc63269fcd92eb5b0dc9a411a4e8bcb5164d3ecb" resname="header.punch_phrase_1">
+        <source>header.punch_phrase_1</source>
+        <target state="new">header.punch_phrase_1</target>
+        <jms:reference-file line="7">views/Common/dummyTranslation.html.twig</jms:reference-file>
+        <jms:reference-file line="6">Theme/Agency/header.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0131962ed25e5cc5297f62b89f64cd240152fe9f" resname="header.punch_phrase_2">
+        <source>header.punch_phrase_2</source>
+        <target state="new">header.punch_phrase_2</target>
+        <jms:reference-file line="8">views/Common/dummyTranslation.html.twig</jms:reference-file>
+        <jms:reference-file line="7">Theme/Agency/header.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="0eaaf3f1a399f02371fcf153b06d93f8363ae199" resname="header.tell_me_more">
+        <source>header.tell_me_more</source>
+        <target state="new">header.tell_me_more</target>
+        <jms:reference-file line="9">views/Common/dummyTranslation.html.twig</jms:reference-file>
+        <jms:reference-file line="8">Theme/Agency/header.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="3d79d91365718cd96fa7e9663a57ec25b33ab307" resname="services.heading">
+        <source>services.heading</source>
+        <target state="new">services.heading</target>
+        <jms:reference-file line="25">views/Common/dummyTranslation.html.twig</jms:reference-file>
+        <jms:reference-file line="8">Theme/Agency/services.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="dc4aab31144f7d3c8d99b9cf1375955764f7415e" resname="services.service_list.ecommerce.name">
+        <source>services.service_list.ecommerce.name</source>
+        <target state="new">services.service_list.ecommerce.name</target>
+        <jms:reference-file line="27">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="1c0e790484a280ffcdf7bb4a46545801b1919c2d" resname="services.service_list.ecommerce.presentation">
+        <source>services.service_list.ecommerce.presentation</source>
+        <target state="new">services.service_list.ecommerce.presentation</target>
+        <jms:reference-file line="28">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="7eb843eddb466a0372f85e57e5ee7325beed2a4e" resname="services.service_list.responsive.name">
+        <source>services.service_list.responsive.name</source>
+        <target state="new">services.service_list.responsive.name</target>
+        <jms:reference-file line="29">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="9666c13b498b576602ce8224e89620d404f736c9" resname="services.service_list.responsive.presentation">
+        <source>services.service_list.responsive.presentation</source>
+        <target state="new">services.service_list.responsive.presentation</target>
+        <jms:reference-file line="30">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="b96b5d13b492c50a0bbc99617efd71904dc0b501" resname="services.service_list.web_security.name">
+        <source>services.service_list.web_security.name</source>
+        <target state="new">services.service_list.web_security.name</target>
+        <jms:reference-file line="31">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="dc441fcba91175047adb67dac288f5049b1c55d4" resname="services.service_list.web_security.presentation">
+        <source>services.service_list.web_security.presentation</source>
+        <target state="new">services.service_list.web_security.presentation</target>
+        <jms:reference-file line="32">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="adfe326a6cdc380af9c425246ed545082faac7b7" resname="services.subheading">
+        <source>services.subheading</source>
+        <target state="new">services.subheading</target>
+        <jms:reference-file line="26">views/Common/dummyTranslation.html.twig</jms:reference-file>
+        <jms:reference-file line="9">Theme/Agency/services.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4d17528172ba302512736c6c9318e7e5bf2f3f20" resname="team.heading">
+        <source>team.heading</source>
+        <target state="new">team.heading</target>
+        <jms:reference-file line="10">Theme/Agency/team.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4572d1d995fdfcd6bd2eb10a70819789ea8bb9ca" resname="team.members.diana.presentation">
+        <source>team.members.diana.presentation</source>
+        <target state="new">team.members.diana.presentation</target>
+        <jms:reference-file line="35">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c3d7162195495487d8c33d1d65626fbe334b459f" resname="team.members.kay.presentation">
+        <source>team.members.kay.presentation</source>
+        <target state="new">team.members.kay.presentation</target>
+        <jms:reference-file line="33">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="c11adedc1d8d6abd793f515eb0e522285da10b61" resname="team.members.larry.presentation">
+        <source>team.members.larry.presentation</source>
+        <target state="new">team.members.larry.presentation</target>
+        <jms:reference-file line="34">views/Common/dummyTranslation.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="baf6f5df7a0fe76ab34e7c7f8990a9f9189a5832" resname="team.subheading">
+        <source>team.subheading</source>
+        <target state="new">team.subheading</target>
+        <jms:reference-file line="11">Theme/Agency/team.html.twig</jms:reference-file>
+      </trans-unit>
+      <trans-unit id="4962f21d979f1b545ee14b7e0da07ef3047d4d58" resname="team.team_footer">
+        <source>team.team_footer</source>
+        <target state="new">team.team_footer</target>
+        <jms:reference-file line="36">views/Common/dummyTranslation.html.twig</jms:reference-file>
+        <jms:reference-file line="38">Theme/Agency/team.html.twig</jms:reference-file>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

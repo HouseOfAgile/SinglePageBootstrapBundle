@@ -1,0 +1,39 @@
+<nav>
+    <div class="da-navbar-wrapper da-navbar-style {{ fixedTop|default(false) ? ' navbar-fixed-top' : '' }}">
+        <div class="navbar navbar-jd{{ staticTop|default(false) ? ' navbar-static-top' : '' }}">
+            {% block header %}
+                <div class="navbar-header">
+                    {% block toggle %}
+                        <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                data-target=".navbar-responsive-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    {% endblock %}
+                    {% block brand %}
+                        <a class="navbar-brand"
+                           href="{{ path('hoa_web_homepage') }}"
+                           alt="{{ application_name }}">
+                        </a>
+                    {% endblock %}
+                </div>
+            {% endblock %}
+            {% block menu_container %}
+                <div class="col-md-9 pull-right">
+                    <div class="collapse navbar-collapse navbar-responsive-collapse">
+                        <div class="row">
+                            {% block menu %}
+                                <div class="col-md-12">
+                                </div>
+                            {% endblock %}
+                        </div>
+                    </div>
+                </div>
+            {% endblock %}
+
+        </div>
+    </div>
+</nav>
+

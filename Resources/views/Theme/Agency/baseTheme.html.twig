@@ -1,0 +1,94 @@
+{% trans_default_domain global_theme %}
+
+{% extends 'HOASinglePageBundle::base.html.twig' %}
+{% from 'DacorpExtraBundle:Macros:improvedFlash.html.twig' import session_flash %}
+
+    {% block navbar %}
+        {% embed 'HOASinglePageBundle:Theme/Agency:navbar.html.twig' with { fixedTop: false } %}
+        {% endembed %}
+    {% endblock navbar %}
+
+{% block stylesheets_main %}
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet"/>
+
+    <!-- Custom Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet'
+          type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+
+    {% stylesheets filter='?yui_css,cssrewrite' output='css/compiled/desktop-full.css'
+    '@HOASinglePageBundle/Resources/public/less/themes/bootstrap-agency.less'
+    %}
+
+    <link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="screen"/>
+    {% endstylesheets %}
+
+
+    {#{% stylesheets filter='?yui_css,cssrewrite,less' output='compiled/frontend.css'#}
+    {#'@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/agency/css/agency.css' %}#}
+
+    {#<link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen"/>#}
+    {#{% endstylesheets %}#}
+
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+{% endblock stylesheets_main %}
+
+{% block stylesheets %}
+
+
+
+{% endblock stylesheets %}
+
+{% block head_script %}
+    {{ parent() }}
+
+    {# Add extra css here or in a file if massive #}
+    <style type="text/css">
+        .navbar .dropdown-menu{
+            background-color:#fec503;
+        }
+
+        .navbar-default .navbar-nav > .open > a:hover,
+        .navbar-default .navbar-nav > .open > a:focus {
+            color: #fff;
+            background-color: #fec503;
+        }
+        .navbar-default .navbar-nav > .open > a {
+            border-radius: 3px;
+        }
+        header {
+        {% image '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/agency/img/header-bg.jpg' %}
+        background-image: url({{ asset_url }});
+        {% endimage %}
+        }
+
+        section#contact {
+        {% image '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/agency/img/map-image.png' %}
+            background-image: url({{ asset_url }});
+        {% endimage %}
+        }
+    </style>
+
+{% endblock %}
+
+
+
+{% block foot_script %}
+    {{ parent() }}
+
+    {% javascripts filter='?yui_js' output='compiled/frontend.js'
+    '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/agency/js/classie.js'
+    '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/agency/js/cbpAnimatedHeader.js'
+    '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/agency/js/jqBootstrapValidation.js'
+    '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/agency/js/contact_me.js'
+    '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/agency/js/agency.js' %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+    {% include "HOASinglePageBundle:JsCommon:frontend-js.html.twig" %}
+
+{% endblock foot_script %}
+

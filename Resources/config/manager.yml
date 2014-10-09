@@ -1,0 +1,7 @@
+parameters:
+    hoa.manager.spa_config.class: "HOA\Bundle\SinglePageBundle\Services\Manager\SPAConfigManager"
+
+services:
+    hoa.manager.spa_config:
+        class: %hoa.manager.spa_config.class%
+        arguments: ["@dacorp.manager.yml_file","%hoa_single_page.data_conf_path%"]

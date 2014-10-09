@@ -1,0 +1,16 @@
+{% trans_default_domain global_theme %}
+<!-- Call to Action -->
+<aside class="call-to-action bg-primary">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h3>{{ ('aside.header')|trans }}</h3>
+                {% for button in data.button %}
+                    <a href="{{ button.url }}" class="btn btn-lg btn-light">{{ button.name }}</a>
+
+                {% endfor %}
+                <a href="#" class="btn btn-lg btn-dark">Look at Me!</a>
+            </div>
+        </div>
+    </div>
+</aside>

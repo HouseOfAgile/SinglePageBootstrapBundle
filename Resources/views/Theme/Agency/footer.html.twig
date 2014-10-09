@@ -1,0 +1,29 @@
+{% trans_default_domain global_theme %}
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <span class="copyright">{{ ('footer.copyright')|trans }}</span>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline social-buttons">
+                    {% for social_name, social_url in data.syndication %}
+                        {%  if social_url is not null %}
+                            <li><a href="{{ social_url }}"><i class="fa fa-{{ social_name }}"></i></a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline quicklinks">
+                    {% for link_name, link_data in data.links %}
+                    <li><a href="{{ link_data.url }}">{{ ('footer.links.'~link_name~'.name')|trans }}</a>
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>

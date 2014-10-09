@@ -1,0 +1,107 @@
+settings:
+    global_theme: stylishportfolio
+    active_sections:
+        - about_spo
+        - services_spo
+        - callout_spo
+        - portfolio_spo
+        - aside_spo
+        - map_spo
+#    should be used to define what kind of website
+    type: singlepage
+    title: "Stylish Portfolio"
+    mail: "test@test.com"
+    header: true
+    footer: true
+
+header:
+    type: stylishportfolio_header
+    data:
+        punch_phrase_1: "text"
+        punch_phrase_2: "text"
+        tell_me_more: "text"
+sections:
+    about_spo:
+        type: stylishportfolio_about
+        data:
+            heading: "text"
+            subheading: "text"
+            timeline:
+                launch:
+                    date: "text"
+                    name: "text"
+                    presentation: "text"
+                    image: "image"
+                agency_born:
+                    date: "text"
+                    name: "text"
+                    presentation: "text"
+                    image: "image"
+                full_service:
+                    date: "text"
+                    name: "text"
+                    presentation: "text"
+                    image: "image"
+            phase_2:
+                    date: "text"
+                    name: "text"
+                    presentation: "text"
+                    image: "image"
+            end_about:
+                name: "text"
+
+    services_spo:
+        type: stylishportfolio_services
+        data:
+            heading: "text"
+            subheading: "text"
+            service_list:
+                ecommerce:
+                    name: "text"
+                    presentation: "text"
+                    icon: "lightbulb-o"
+                responsive:
+                    name: "text"
+                    presentation: "text"
+                    icon: "laptop"
+                science:
+                    name: "text"
+                    presentation: "text"
+                    icon: "lock"
+                protection:
+                    name: "text"
+                    presentation: "text"
+                    icon: "shield"
+    aside_spo:
+        type: stylishportfolio_aside
+        data:
+            button:
+                button1:
+                    name: "text"
+                    url: http://www.google.com
+                button2:
+                    name: "text"
+                    url: http://www.google.fr
+    map_spo:
+        type: stylishportfolio_map
+        data:
+    callout_spo:
+        type: stylishportfolio_callout
+        header: "text"
+        data:
+    portfolio_spo:
+        type: stylishportfolio_portfolio
+        header: "text"
+        data:
+footer:
+    type: stylishportfolio_footer
+    data:
+        heading: "text"
+        address: "text"
+        phone: "(123) 456-7890"
+        email: "name@example.com"
+        copyright: "text"
+        syndication:
+            facebook: "https://www.facebook.com/"
+            twitter:
+            linkedin: "https://www.linkedin.com/"

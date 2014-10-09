@@ -1,0 +1,18 @@
+change_lang:
+    path:   /changelang/{newlang}
+    defaults:  { _controller: DacorpExtraBundle:Default:switchLanguage }
+    requirements:
+        newlang: "[a-z][a-z]"
+
+hoa_web_homepage:
+    pattern: /
+    defaults:
+        _controller: FrameworkBundle:Redirect:redirect
+        route: hoa_web_singlepage
+        siteId: "%hoa_single_page.main_theme%"
+        permanent: true
+
+hoa_web_singlepage:
+    path:     /{siteId}
+    defaults: { _controller: HOASinglePageBundle:Frontend:singlePage }
+

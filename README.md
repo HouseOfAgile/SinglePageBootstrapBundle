@@ -1,4 +1,4 @@
-single-page-bootstrap-bundle
-============================
+Single Page Bootstrap Bundle
+############################
 
-Bootstrap Single Page Bundle
+WIP
