@@ -1,5 +1,6 @@
 {% extends (global_theme is defined)?'HOASinglePageBundle:Theme/'~(config.settings.global_theme|capitalize)~':baseTheme.html.twig':'HOASinglePageBundle:Theme:defaultTheme.html.twig' %}
 
+{% set global_theme = config.settings.global_theme %}
 {% block container %}
     {% block navbar_extra %}
     {% endblock navbar_extra %}
