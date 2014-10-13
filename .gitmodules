@@ -1,0 +1,3 @@
+[submodule "Resources/public/third-party/startbootstrap"]
+	path = Resources/public/third-party/startbootstrap
+	url = https://github.com/IronSummitMedia/startbootstrap.git
