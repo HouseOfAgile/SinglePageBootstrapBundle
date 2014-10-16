@@ -41,7 +41,7 @@ EOT
         $this->input = $input;
         $this->output = $output;
 
-        foreach ($this->resourcesBundle as $packageName => $packageTargetName) {
+        foreach (self::$resourcesBundle as $packageName => $packageTargetName) {
             $this->symlinkResource(self::$HOASinglePageBundleName, $packageName, $this->getTargetSuffix($packageTargetName));
         }
     }
