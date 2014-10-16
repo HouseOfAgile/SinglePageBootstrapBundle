@@ -2,7 +2,7 @@
     "name":         "houseofagile/single-page-boostrap-bundle",
     "description":  "Single Page based on bootstrap and symfony",
     "keywords":     ["single page", "multilanguage", "contact"],
-    "homepage":     "https://github.com/HouseOfAgile/single-page-bootstrap-bundle",
+    "homepage":     "https://github.com/HouseOfAgile/SinglePageBootstrapBundle",
     "type":         "symfony-bundle",
     "license":      "Apache",
     "authors": [
