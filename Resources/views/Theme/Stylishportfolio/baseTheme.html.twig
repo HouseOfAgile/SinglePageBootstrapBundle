@@ -19,7 +19,7 @@
 
     {% stylesheets filter='?yui_css,cssrewrite' output='css/compiled/desktop-full.css'
     '@HOASinglePageBundle/Resources/public/less/themes/bootstrap-stylishportfolio.less'
-    '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/stylish-portfolio/css/stylish-portfolio.css' %}
+    '@HOASinglePageBundle/Resources/public/third-party/start-bootstrap/templates/stylish-portfolio/css/stylish-portfolio.css' %}
 
 
     <link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="screen"/>
@@ -27,7 +27,7 @@
 
 
     {#{% stylesheets filter='?yui_css,cssrewrite,less' output='compiled/frontend.css'#}
-    {#'@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/freelancer/css/freelancer.css' %}#}
+    {#'@HOASinglePageBundle/Resources/public/third-party/start-bootstrap/templates/freelancer/css/freelancer.css' %}#}
     {##}
     {#<link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen"/>#}
     {#{% endstylesheets %}#}
@@ -50,14 +50,14 @@
         /* Header */
 
         .header {
-        {% image '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/stylish-portfolio/img/bg.jpg' %}
+        {% image '@HOASinglePageBundle/Resources/public/third-party/start-bootstrap/templates/stylish-portfolio/img/bg.jpg' %}
             background: url({{ asset_url }}) no-repeat center center scroll;
         {% endimage %}
         }
 
         /* Callout */
         .callout {
-        {% image '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/stylish-portfolio/img/callout.jpg' %}
+        {% image '@HOASinglePageBundle/Resources/public/third-party/start-bootstrap/templates/stylish-portfolio/img/callout.jpg' %}
             background: url({{ asset_url }}) no-repeat center center scroll;
             -webkit-background-size: cover;
             -moz-background-size: cover;

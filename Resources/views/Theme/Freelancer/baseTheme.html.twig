@@ -29,7 +29,7 @@
 
 
     {#{% stylesheets filter='?yui_css,cssrewrite,less' output='compiled/frontend.css'#}
-    {#'@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/freelancer/css/freelancer.css' %}#}
+    {#'@HOASinglePageBundle/Resources/public/third-party/start-bootstrap/templates/freelancer/css/freelancer.css' %}#}
 {##}
     {#<link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen"/>#}
     {#{% endstylesheets %}#}
@@ -70,11 +70,11 @@
     {{ parent() }}
 
     {% javascripts filter='?yui_js' output='compiled/frontend.js'
-    '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/freelancer/js/classie.js'
-    '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/freelancer/js/cbpAnimatedHeader.js'
-    '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/freelancer/js/jqBootstrapValidation.js'
-    '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/freelancer/js/contact_me.js'
-    '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/freelancer/js/freelancer.js' %}
+    '@HOASinglePageBundle/Resources/public/third-party/start-bootstrap/templates/freelancer/js/classie.js'
+    '@HOASinglePageBundle/Resources/public/third-party/start-bootstrap/templates/freelancer/js/cbpAnimatedHeader.js'
+    '@HOASinglePageBundle/Resources/public/third-party/start-bootstrap/templates/freelancer/js/jqBootstrapValidation.js'
+    '@HOASinglePageBundle/Resources/public/third-party/start-bootstrap/templates/freelancer/js/contact_me.js'
+    '@HOASinglePageBundle/Resources/public/third-party/start-bootstrap/templates/freelancer/js/freelancer.js' %}
     <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
     {% include "HOASinglePageBundle:JsCommon:frontend-js.html.twig" %}

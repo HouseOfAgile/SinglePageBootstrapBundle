@@ -2,6 +2,14 @@
 
 namespace HOA\Bundle\SinglePageBundle\Services\Manager;
 
+/*
+ * This file is part of the SinglePageBootstrapBundle.
+ *
+ * (c) Jean-Christophe Meillaud <jc@houseofagile.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 use Dacorp\ExtraBundle\Services\YmlFileManager;
 use Symfony\Component\Filesystem\Filesystem;

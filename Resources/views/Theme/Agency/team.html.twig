@@ -15,7 +15,7 @@
             {% for team_name, team_data in data.members %}
             <div class="col-sm-{{ (loop.length%3 ==0)?4:(loop.length%2 ==0)?6:3 }}">
                 <div class="team-member">
-                    {% image '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/agency/img/team/1.jpg' %}
+                    {% image '@HOASinglePageBundle/Resources/public/third-party/start-bootstrap/templates/agency/img/team/1.jpg' %}
                     <img class="img-responsive img-circle" src="{{ asset_url }}" alt="">
                     {% endimage %}
                     <h4>{{ team_data.name }}</h4>

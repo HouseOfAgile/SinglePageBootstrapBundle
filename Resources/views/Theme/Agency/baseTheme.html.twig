@@ -28,7 +28,7 @@
 
 
     {#{% stylesheets filter='?yui_css,cssrewrite,less' output='compiled/frontend.css'#}
-    {#'@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/agency/css/agency.css' %}#}
+    {#'@HOASinglePageBundle/Resources/public/third-party/start-bootstrap/templates/agency/css/agency.css' %}#}
 
     {#<link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen"/>#}
     {#{% endstylesheets %}#}
@@ -61,13 +61,13 @@
             border-radius: 3px;
         }
         header {
-        {% image '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/agency/img/header-bg.jpg' %}
+        {% image '@HOASinglePageBundle/Resources/public/third-party/start-bootstrap/templates/agency/img/header-bg.jpg' %}
         background-image: url({{ asset_url }});
         {% endimage %}
         }
 
         section#contact {
-        {% image '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/agency/img/map-image.png' %}
+        {% image '@HOASinglePageBundle/Resources/public/third-party/start-bootstrap/templates/agency/img/map-image.png' %}
             background-image: url({{ asset_url }});
         {% endimage %}
         }
@@ -81,11 +81,11 @@
     {{ parent() }}
 
     {% javascripts filter='?yui_js' output='compiled/frontend.js'
-    '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/agency/js/classie.js'
-    '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/agency/js/cbpAnimatedHeader.js'
-    '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/agency/js/jqBootstrapValidation.js'
-    '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/agency/js/contact_me.js'
-    '@HOASinglePageBundle/Resources/public/third-party/startbootstrap/templates/agency/js/agency.js' %}
+    '@HOASinglePageBundle/Resources/public/third-party/start-bootstrap/templates/agency/js/classie.js'
+    '@HOASinglePageBundle/Resources/public/third-party/start-bootstrap/templates/agency/js/cbpAnimatedHeader.js'
+    '@HOASinglePageBundle/Resources/public/third-party/start-bootstrap/templates/agency/js/jqBootstrapValidation.js'
+    '@HOASinglePageBundle/Resources/public/third-party/start-bootstrap/templates/agency/js/contact_me.js'
+    '@HOASinglePageBundle/Resources/public/third-party/start-bootstrap/templates/agency/js/agency.js' %}
     <script type="text/javascript" src="{{ asset_url }}"></script>
     {% endjavascripts %}
     {% include "HOASinglePageBundle:JsCommon:frontend-js.html.twig" %}
