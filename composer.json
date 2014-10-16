@@ -13,9 +13,31 @@
         }
     ],
     "minimum-stability": "dev",
+    "repositories": [
+        {
+            "type": "package",
+            "package": {
+                "name": "ironsummitmedia/startbootstrap",
+                "type": "component",
+                "version": "master",
+                "dist": {
+                    "url": "https://github.com/IronSummitMedia/startbootstrap/archive/gh-pages.zip",
+                    "type": "zip"
+                },
+                "source": {
+                    "url": "https://github.com/IronSummitMedia/startbootstrap",
+                    "type": "git",
+                    "reference": "master"
+                }
+            }
+        }
+    ],
     "require": {
         "symfony/framework-bundle": "~2.3",
-        "symfony/console": "*"
+        "symfony/console": "*",
+        "ironsummitmedia/startbootstrap": "master",
+        "mopa/bootstrap-bundle": "dev-master",
+        "twbs/bootstrap": "dev-master"
     },
     "require-dev": {
         "houseofagile/notification-bundle": "dev-master",
