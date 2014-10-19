@@ -62,7 +62,7 @@ Documentation
 
 Additional Resources:
 
-*  [SinglePageBootstrapBundle](https://github.com/HouseOfAgile/BootstrapSinglePage) - Simple integration for that bundle based on latest symfony standard.
+*  [BootstrapSinglePage](https://github.com/HouseOfAgile/BootstrapSinglePage) - Simple integration for that bundle based on latest symfony standard.
 
 Warning
 -------
