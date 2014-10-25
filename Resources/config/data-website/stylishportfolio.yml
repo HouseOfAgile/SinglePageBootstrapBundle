@@ -13,7 +13,9 @@ settings:
     mail: "test@test.com"
     header: true
     footer: true
-
+    available_lang:
+      - en
+      - fr
 header:
     type: stylishportfolio_header
     data:

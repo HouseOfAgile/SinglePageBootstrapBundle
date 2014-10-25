@@ -11,12 +11,14 @@
 
 namespace HOA\Bundle\SinglePageBundle\Menu;
 
+use HOA\Bundle\SinglePageBundle\Services\Manager\SPAConfigManager;
 use Knp\Menu\ItemInterface;
 use Knp\Menu\MenuFactory;
 use Symfony\Component\HttpFoundation\Request;
 use Dacorp\ExtraBundle\Menu\MenuBuilder;
 use Knp\Menu\FactoryInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface;
+use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\Security\Core\SecurityContextInterface;
 use Symfony\Component\Translation\TranslatorInterface;
 use JMS\TranslationBundle\Annotation\Ignore;
@@ -25,6 +27,12 @@ use JMS\TranslationBundle\Annotation\Ignore;
 
 class FrontendMenuBuilder
 {
+    /**
+     * Menu factory.
+     *
+     * @var SPAConfigManager
+     */
+    protected $spaConfigManager;
     /**
      * Menu factory.
      *
@@ -40,25 +48,23 @@ class FrontendMenuBuilder
 
     protected $defaultLang;
 
-    protected $availableLangs;
-
     /* @var $menuBuilder MenuBuilder */
     protected $menuBuilder;
 
-    /**
-     * Request.
-     *
-     * @var Request
-     */
-    protected $request;
+    protected $requestStack;
 
-    public function __construct( MenuFactory $menuFactory,TranslatorInterface $translator, MenuBuilder $menuBuilder, $defaultLang, $availableLangs)
+
+    public function __construct( SPAConfigManager $spaConfigManager,RequestStack $requestStack,MenuFactory $menuFactory,TranslatorInterface $translator, MenuBuilder $menuBuilder, $defaultLang)
     {
+        $this->spaConfigManager = $spaConfigManager;
+        $this->requestStack = $requestStack;
         $this->factory = $menuFactory;
         $this->translator = $translator;
         $this->defaultLang = $defaultLang;
-        $this->availableLangs = $availableLangs;
+
         $this->menuBuilder = $menuBuilder;
+
+
     }
 
     public function createLangMenu()
@@ -77,10 +83,12 @@ class FrontendMenuBuilder
             'extras' => array('safe_label' => true)
         ));
 
-        $currLang=$this->request->getSession()->get('_locale', $this->defaultLang);
+        $currLang=$this->requestStack->getCurrentRequest()->getSession()->get('_locale', $this->defaultLang);
         $languageDropDown->setLabel('<i class="fa fa-flag"></i> '.$currLang.' <i class="fa fa-chevron-down"></i>');
+        $request=$this->requestStack->getCurrentRequest();
+        $config=$this->spaConfigManager->loadSPAConfig($request->attributes->get('siteId'));
         //create the childs
-        foreach ($this->availableLangs as $ilang) {
+        foreach ($config['settings']['available_lang'] as $ilang) {
             if ($ilang != $currLang) {
                 $languageDropDown->addChild($ilang, array(
                     'route' => 'change_lang',
@@ -93,14 +101,4 @@ class FrontendMenuBuilder
         return $menu;
     }
 
-
-    /**
-     * Sets the request the service
-     *
-     * @param Request $request
-     */
-    public function setRequest(Request $request = null)
-    {
-        $this->request = $request;
-    }
 }

@@ -5,9 +5,7 @@ services:
 
     hoa.menu_builder:
         class: %hoa.menu_builder.frontend.class%
-        arguments: [ "@knp_menu.factory","@translator","@dacorp.menu_builder","%locale%","%available_langs%"]
-        calls:
-            - [setRequest, ["@?request="]]
+        arguments: [ "@hoa.manager.spa_config","@request_stack","@knp_menu.factory","@translator","@dacorp.menu_builder","%locale%"]
 
     hoa.menu_builder.lang_menu:
         class: Knp\Menu\MenuItem
