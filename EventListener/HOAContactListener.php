@@ -56,14 +56,20 @@ class HOAContactListener extends NotificationListener {
             'event' => $event->getEventContext()
         );
 
-        $this->logger->info('Send a Member mail of type ['.$event->getName().']');
+        $this->logger->info('Send a Beta register mail of type ['.$event->getName().'] to '.$event->getMail());
         $this->mailerService->sendMessage(
             self::$emailTemplates[$event->getName()],
             $context,
             $event->getMail()
         );
-    }
 
+        $this->logger->info('Send a Notification mail of type ['.$event->getName().'] to '.$this->mailerService->getBccEmail());
+        $this->mailerService->sendMessage(
+            "HOANotificationBundle:Mails/Register:betaRegisterNotification.html.twig",
+            $context,
+            $this->mailerService->getBccEmail()
+        );
+    }
     public function sendSMS(NotificationEventInterface $event) {
 
     }
