@@ -30,21 +30,6 @@
 {% endblock stylesheets_main %}
 
 {% block stylesheets %}
-    {# We use the default style provided by dacorp #}
-    {{ parent() }}
-
-    {#Temporary include glyphicon, should be provided by mopa integration tho #}
-
-    {#<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">#}
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"/>
-
-    {% stylesheets filter='?yui_css,cssrewrite,less' output='compiled/global.css'
-    '@HOASinglePageBundle/Resources/public/less/global.less' %}
-    <link href="{{ asset_url }}" type="text/css" rel="stylesheet" media="screen"/>
-    {% endstylesheets %}
-
-    <link href='http://fonts.googleapis.com/css?family=Carme|Open+Sans+Condensed:300|Open+Sans' rel='stylesheet'
-          type='text/css'>
 {% endblock stylesheets %}
 
 {% block head_script %}
@@ -87,6 +72,7 @@
 
 {% block foot_script %}
 
+    {{ parent() }}
     {#'http://ubervu.github.io/grid/src/gridList.js'#}
     {#'http://ubervu.github.io/grid/src/jquery.gridList.js'#}
     {% javascripts filter='?yui_js' output='compiled/all-libraries.js'
