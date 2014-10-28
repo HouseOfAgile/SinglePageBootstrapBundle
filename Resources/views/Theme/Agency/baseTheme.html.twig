@@ -19,7 +19,7 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
 
-    {% stylesheets filter='?yui_css,cssrewrite' output='css/compiled/desktop-full.css'
+    {% stylesheets filter='?yui_css,cssrewrite' output='css/compiled/agency-desktop-full.css'
     '@HOASinglePageBundle/Resources/public/less/themes/bootstrap-agency.less'
     %}
 
@@ -80,7 +80,7 @@
 {% block foot_script %}
     {{ parent() }}
 
-    {% javascripts filter='?yui_js' output='compiled/frontend.js'
+    {% javascripts filter='?yui_js' output='compiled/agency-frontend.js'
     '@HOASinglePageBundle/Resources/public/third-party/start-bootstrap/templates/agency/js/classie.js'
     '@HOASinglePageBundle/Resources/public/third-party/start-bootstrap/templates/agency/js/cbpAnimatedHeader.js'
     '@HOASinglePageBundle/Resources/public/third-party/start-bootstrap/templates/agency/js/jqBootstrapValidation.js'
