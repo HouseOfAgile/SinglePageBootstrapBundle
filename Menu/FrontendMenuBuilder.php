@@ -67,7 +67,7 @@ class FrontendMenuBuilder
 
     }
 
-    public function createLangMenu()
+    public function createLangMenu($availableLangs)
     {
         $menu = $this->factory->createItem('root', array(
             'childrenAttributes' => array(
@@ -85,10 +85,8 @@ class FrontendMenuBuilder
 
         $currLang=$this->requestStack->getCurrentRequest()->getSession()->get('_locale', $this->defaultLang);
         $languageDropDown->setLabel('<i class="fa fa-flag"></i> '.$currLang.' <i class="fa fa-chevron-down"></i>');
-        $request=$this->requestStack->getCurrentRequest();
-        $config=$this->spaConfigManager->loadSPAConfig($request->attributes->get('siteId'));
         //create the childs
-        foreach ($config['settings']['available_lang'] as $ilang) {
+        foreach ($availableLangs as $ilang) {
             if ($ilang != $currLang) {
                 $languageDropDown->addChild($ilang, array(
                     'route' => 'change_lang',

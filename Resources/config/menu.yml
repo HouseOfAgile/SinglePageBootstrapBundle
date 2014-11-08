@@ -11,6 +11,7 @@ services:
         class: Knp\Menu\MenuItem
         factory_method: createLangMenu
         factory_service: hoa.menu_builder
+        arguments: [ "%available_langs%"]
         scope: request # needed as we have the request as a dependency here
 
         tags:
