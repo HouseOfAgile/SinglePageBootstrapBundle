@@ -9,7 +9,7 @@ settings:
         - map_spo
 #    should be used to define what kind of website
     type: singlepage
-    title: "Stylish Portfolio"
+    title: "Stylishportfolio"
     mail: "test@test.com"
     header: true
     footer: true
@@ -87,6 +87,8 @@ sections:
     map_spo:
         type: stylishportfolio_map
         data:
+            gmapAddress: "Musée du Louvre, Paris, FR"
+            google_api_key: "TOBEDEFINED"
     callout_spo:
         type: stylishportfolio_callout
         header: "text"
