@@ -1,0 +1,17 @@
+{% trans_default_domain global_theme %}
+
+<section id="{{ sectionName|default('soundcloud') }}" class="fullHeight-section">
+    <div class="row">
+        <div class="col-md-9 col-md-offset-3">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <h2 class="section-heading">{{ (sectionName~'.heading')|trans }}</h2>
+                    <iframe width="100%" height="{{ data.size }}" scrolling="no" frameborder="no"
+                            src="https://w.soundcloud.com/player/?url={{ data.url }}&amp;auto_play={{ data.auto_play }}&amp;hide_related={{ data.hide_related }}&amp;show_comments={{ data.show_comments }}&amp;show_user={{ data.show_user }}&amp;show_reposts={{ data.show_reposts }}&amp;visual={{ data.visual }}"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

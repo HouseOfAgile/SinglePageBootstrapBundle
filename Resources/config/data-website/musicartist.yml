@@ -1,0 +1,64 @@
+settings:
+    global_theme: musicartist
+    active_sections:
+        - bio
+        - soundcloud
+        - hearthisat
+        - contact
+#    should be used to define what kind of website
+    type: singlepage
+    title: "Artist"
+    mail: "test@test.com"
+    header: true
+    footer: true
+    available_lang:
+      - en
+      - fr
+header:
+    type: musicartist_header
+    data:
+        punch_phrase_1: "text"
+        punch_phrase_2: "text"
+        tell_me_more: "text"
+sections:
+    bio:
+        type: musicartist_musicBio
+        data:
+            heading: "text"
+            subheading: "text"
+            bio_content: "text"
+
+    soundcloud:
+        type: musicartist_soundcloud
+        data:
+            url: "https%3A//api.soundcloud.com/users/441466"
+            size: "600"
+            auto_play: false
+            hide_related: false
+            show_comments: true
+            show_user : true
+            show_reposts: false
+            visual: true
+
+    hearthisat:
+        type: musicartist_hearthisat
+        data:
+            artist: "lexer"
+            size: "450"
+    contact:
+        type: common_contactModal
+        data:
+            heading: "text"
+            subheading: "text"
+footer:
+    type: musicartist_footer
+    data:
+        heading: "text"
+        address: "text"
+        phone: "(123) 456-7890"
+        email: "name@example.com"
+        copyright: "text"
+        syndication:
+            facebook: "https://www.facebook.com/"
+            twitter:
+            linkedin: "https://www.linkedin.com/"

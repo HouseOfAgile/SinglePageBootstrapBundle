@@ -1,0 +1,19 @@
+{% trans_default_domain global_theme %}
+
+<section id="{{ sectionName|default('musicBio') }}" class="fullHeight-section">
+    <div class="col-md-8 col-md-offset-3" id="bio-header">
+        <h1>{{ (sectionName~'.heading')|trans|raw }} - <small>{{ (sectionName~'.subheading')|trans|raw }}</small></h1>
+    </div>
+    <div class="row">
+        <div class="col-md-4 col-md-offset-3">
+            <div class="row">
+                <div class="col-md-12" id="bio-content">
+                    {{ (sectionName~'.bio_content')|trans|raw }}
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            picture
+        </div>
+    </div>
+</section>

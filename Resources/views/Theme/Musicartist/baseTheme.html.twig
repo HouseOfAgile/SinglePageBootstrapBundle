@@ -1,0 +1,72 @@
+{% trans_default_domain global_theme %}
+
+{% extends 'HOASinglePageBundle::base.html.twig' %}
+{% from 'DacorpExtraBundle:Macros:improvedFlash.html.twig' import session_flash %}
+
+
+{% block stylesheets_main %}
+    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.0/animate.min.css" rel="stylesheet"/>
+
+    <!-- Custom Fonts -->
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css">
+
+    {% stylesheets filter='?yui_css,cssrewrite' output='css/compiled/musicartist-desktop-full.css'
+    '@HOASinglePageBundle/Resources/public/less/themes/hoa-bootstrap.less'
+    '@HOASinglePageBundle/Resources/public/less/themes/musicartist/musicartist.less'
+    %}
+
+    <link rel="stylesheet" href="{{ asset_url }}" type="text/css" media="screen"/>
+    {% endstylesheets %}
+
+{% endblock stylesheets_main %}
+
+{% block stylesheets %}
+
+    {{ parent() }}
+
+
+{% endblock stylesheets %}
+{% block head_script %}
+
+    {# Add extra css here or in a file if big #}
+    <style type="text/css">
+    </style>
+{% endblock head_script %}
+
+{% block navbar %}
+{% endblock navbar %}
+
+{% block content_row %}
+    {% include "HOASinglePageBundle:Theme/Navbar:sideNavbar.html.twig" %}
+
+                {% block flashes %}
+                    {% if app.session.flashbag.peekAll|length > 0 %}
+                        <div class="row top-buffer">
+                            <div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
+                                {{ session_flash(true,true) }}
+                            </div>
+                        </div>
+                    {% endif %}
+                {% endblock flashes %}
+                {% block content_main %}
+                {% endblock content_main %}
+
+{% endblock content_row %}
+
+
+{% block foot_script %}
+    {{ parent() }}
+
+
+    {% javascripts filter='?yui_js' output='compiled/musicartist-frontend.js'
+    '//cdnjs.cloudflare.com/ajax/libs/wow/1.0.2/wow.min.js'
+    %}
+    <script type="text/javascript" src="{{ asset_url }}"></script>
+    {% endjavascripts %}
+
+    {% include "HOASinglePageBundle:Theme/Musicartist:musicartist.js.twig" %}
+
+{% endblock foot_script %}
+

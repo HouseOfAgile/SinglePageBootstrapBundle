@@ -1,0 +1,30 @@
+{% trans_default_domain global_theme %}
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1 text-center">
+                <h4><strong>{{ ('footer.heading')|trans }}</strong>
+                </h4>
+                <p>{{ ('footer.address')|trans }}</p>
+                <ul class="list-unstyled">
+                    <li><i class="fa fa-phone fa-fw"></i>{{ data.phone }}</li>
+                    <li><i class="fa fa-envelope-o fa-fw"></i>  <a href="{{ data.email }}">{{ data.email }}</a>
+                    </li>
+                </ul>
+                <br>
+
+                <ul class="list-inline">
+                    {% for social_name, social_url in data.syndication %}
+                        {%  if social_url is not null %}
+                            <li><a href="{{ social_url }}"><i class="fa fa-{{ social_name }} fa-fw fa-3x"></i></a>
+                            </li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+                <hr class="small">
+                <p class="text-muted">{{ ('footer.copyright')|trans }}</p>
+            </div>
+        </div>
+    </div>
+</footer>

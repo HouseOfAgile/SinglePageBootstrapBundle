@@ -1,0 +1,17 @@
+{% trans_default_domain global_theme %}
+
+<section id="{{ sectionName|default('hearthisat') }}" class="fullHeight-section">
+    <div class="row">
+        <div class="col-md-9 col-md-offset-3">
+            <div class="row">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <iframe scrolling="no" id="hearthis_at_user_lexer" width="100%" height="{{ data.size }}"
+                            src="https://hearthis.at/{{ data.artist }}/embed/" frameborder="0"
+                            allowtransparency></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+

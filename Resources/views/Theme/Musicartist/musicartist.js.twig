@@ -1,0 +1,59 @@
+
+<script type="text/javascript">
+
+    /* Standard jquery */
+    $(function () {
+        adjustSection();
+        new WOW().init();
+    });
+
+    var animatedNavbar = (function() {
+
+        var docElem = document.documentElement,
+                sidebar = $('#sidebar'),
+                didScroll = false,
+                changeHeaderOn = 400;
+        function init() {
+            window.addEventListener('scroll', function(event) {
+                if (!didScroll) {
+                    didScroll = true;
+                    setTimeout(scrollPage, 250);
+                }
+            }, false);
+        }
+
+        function scrollPage() {
+            var sy = scrollY();
+            if (sy >= changeHeaderOn) {
+                sidebar.fadeIn(800);
+            } else {
+                sidebar.fadeOut(800);
+            }
+            didScroll = false;
+        }
+
+        function scrollY() {
+            return window.pageYOffset || docElem.scrollTop;
+        }
+
+        init();
+
+    })();
+
+    function adjustSection() {
+
+        // Get window size
+        winH = $(window).height();
+
+        // Keep minimum height 550
+        if (winH <= 550) {
+            winH = 550;
+        }
+
+
+        $('.fullHeight-section').each(function () {
+            $(this).height(winH);
+        });
+
+    }
+</script>

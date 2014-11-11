@@ -1,0 +1,81 @@
+{% trans_default_domain global_theme %}
+
+<section id="{{ sectionName|default('contactModal') }}">
+    <div class="container">
+        <div class="row">
+            {% if contactSent %}
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">{{ (sectionName~'.contact.thanks')|trans }} <i
+                                    class="fa fa-heart-o"></i></h2>
+
+                        <h3 class="section-subheading text-muted">{{ (sectionName~'.contact.we_ll_keep_in_touch')|trans }}</h3>
+                    </div>
+                </div>
+            {% else %}
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">{{ (sectionName~'.heading')|trans }} <i
+                                class="fa fa-heart-o"></i></h2>
+
+                    <h3 class="section-subheading text-muted">{{ (sectionName~'.subheading')|trans }}</h3>
+                </div>
+                <div class="col-md-4 col-md-offset-4 col-sm-6 text-center">
+                    <button class="btn btn-primary btn-block btn-lg" data-toggle="modal"
+                            data-target=".contact-modal">
+                        <h2>{{ (sectionName~'.contact.button_join')|trans }}</h2></button>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<div class="contact-modal modal fade" id="betaJoinModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="text-right">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i><span
+                                class="sr-only">Close</span>
+                    </button>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h2 class="section-heading">{{ (sectionName~'.contact-modal.heading')|trans }}</h2>
+
+                        <h3 class="section-subheading text-muted">{{ (sectionName~'.contact.subheading')|trans }}</h3>
+
+                        <div class="row">
+                            {{ form_start(form) }}
+                            <div class="col-md-12">
+                                <div id="success"></div>
+                                {{ form_errors(form) }}
+                            </div>
+                            <div class="col-md-6">
+
+                                {{ form_errors(form) }}
+
+                                {{ form_row(form.email) }}
+                                {{ form_row(form.name) }}
+                                {{ form_row(form.phone) }}
+                                {{ form_row(form.category) }}
+                            </div>
+                            <div class="col-md-6">
+                                {{ form_row(form.message) }}
+                            </div>
+                            <div class="col-md-4 col-md-offset-4">
+                                <button type="submit"
+                                        class="btn btn-primary">{{ (sectionName~'.contact.send_message')|trans }}</button>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        {{ form_end(form) }}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

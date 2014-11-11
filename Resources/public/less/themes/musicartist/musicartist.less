@@ -1,0 +1,38 @@
+@import (less) "../../../third-party/start-bootstrap/templates/stylish-portfolio/css/stylish-portfolio.css";
+
+/* bootstrap 3 helpers */
+
+.navbar-form input, .form-inline input {
+  width:auto;
+}
+
+section {
+  padding-top: 80px;
+}
+
+@media (min-width: 979px) {
+  #sidebar {
+    display:none;
+    position: fixed;
+    top:200px;
+    left:60px;
+    width:240px;
+  }
+}
+
+section#musicBio,
+section#bio {
+  background-color:lightsteelblue;
+  #bio-header{
+    color:white;
+    small{
+      color:#d3d3d3;
+    }
+  }
+  #bio-content{
+    background-color:white;
+    padding:20px 40px;
+    border: 1px solid #dddddd;
+    min-height: 400px;
+  }
+}
