@@ -11,9 +11,8 @@ settings:
     mail: "test@test.com"
     header: true
     footer: true
-    available_lang:
-      - en
-      - fr
+    available_lang: [ en , fr ]
+
 header:
     type: musicartist_header
     data:
@@ -46,7 +45,7 @@ sections:
             artist: "lexer"
             size: "450"
     contact:
-        type: common_contactModal
+        type: common_contact
         data:
             heading: "text"
             subheading: "text"
