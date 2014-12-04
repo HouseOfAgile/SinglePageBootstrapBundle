@@ -10,7 +10,7 @@ settings:
     mail: "test@test.com"
     header: true
     footer: true
-    available_lang:
+    available_lang: [en,fr]
       - en
       - fr
 header:

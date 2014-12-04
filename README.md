@@ -1,6 +1,8 @@
 Single Page Bootstrap Bundle
 ############################
 
+Just a simple bundle to wrap and package some bootstrap theme around a simple symfony skeleton with i18n and basic form management.
+
 Installation
 ------------
 
@@ -60,9 +62,13 @@ if you want to use the current branch
 Documentation
 -------------
 
+## Single Page configuration
+A single page is configured through its yml config file. That file is ued in order to set global settings for the single page, define values for the data used within your single page and define keys that should be translatable.
+
+
 Additional Resources:
 
-*  [BootstrapSinglePage](https://github.com/HouseOfAgile/BootstrapSinglePage) - Simple integration for that bundle based on latest symfony standard.
+*  [BootstrapSinglePage](https://github.com/HouseOfAgile/BootstrapSinglePage) - Simple integration for that bundle based on latest Symfony standard.
 
 Warning
 -------
