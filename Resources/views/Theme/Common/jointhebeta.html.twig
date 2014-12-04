@@ -49,16 +49,16 @@
                         <h3 class="section-subheading text-muted">{{ (sectionName~'.modal.join-the-beta.text')|trans }}</h3>
 
                         <div class="row">
-                            {{ form_start(form) }}
+                            {{ form_start(beta_form) }}
 
 
                             <div class="col-md-12">
                                 <div id="success"></div>
-                                {{ form_errors(form) }}
+                                {{ form_errors(beta_form) }}
                             </div>
                             <div class="col-md-6">
                                 <div class="row">
-                                    {{ form_row(form.email) }}
+                                    {{ form_row(beta_form.email) }}
                                 </div>
                             </div>
                             <div class="col-md-6">
@@ -68,7 +68,7 @@
 
                             <div class="clearfix"></div>
                         </div>
-                        {{ form_end(form) }}
+                        {{ form_end(beta_form) }}
                     </div>
                 </div>
             </div>
