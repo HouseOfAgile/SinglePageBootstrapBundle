@@ -11,8 +11,6 @@ settings:
     header: true
     footer: true
     available_lang: [en,fr]
-      - en
-      - fr
 header:
     type: freelancer_header
     data:
