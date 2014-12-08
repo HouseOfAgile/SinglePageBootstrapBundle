@@ -76,6 +76,7 @@ class FrontendMenuBuilder
         ));
 
 
+
         $languageDropDown = $menu->addChild('lang', array(
             'caret' => false,
             'dropdown' => true,

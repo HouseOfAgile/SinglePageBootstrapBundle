@@ -45,6 +45,7 @@ class ContactFormType extends AbstractType
                 )))
             ->add('phone', 'text', array('label' => false,
                 'horizontal_input_wrapper_class' => 'col-lg-12',
+                'required'=>false,
                 'attr' => array(
                     'placeholder' => 'form.contact.phone',
                 )))

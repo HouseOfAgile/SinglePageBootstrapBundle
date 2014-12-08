@@ -13,7 +13,6 @@ services:
         factory_service: hoa.menu_builder
         arguments: [ "%available_langs%"]
         scope: request # needed as we have the request as a dependency here
-
         tags:
             - { name: knp_menu.menu, alias: hoa.menu_builder.lang_menu }
 
